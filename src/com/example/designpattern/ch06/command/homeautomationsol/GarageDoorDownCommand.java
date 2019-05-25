@@ -2,11 +2,11 @@ package com.example.designpattern.ch06.command.homeautomationsol;
 
 import com.example.designpattern.ch06.command.homeautomation.GarageDoor;
 
-public class GarageDoorOpenCommand implements Command {
+public class GarageDoorDownCommand implements Command {
 
-	GarageDoor garageDoor;
+	private GarageDoor garageDoor;
 	
-	public GarageDoorOpenCommand(GarageDoor garageDoor) {
+	public GarageDoorDownCommand(GarageDoor garageDoor) {
 		// TODO Auto-generated constructor stub
 		this.garageDoor = garageDoor;
 	}
@@ -14,13 +14,13 @@ public class GarageDoorOpenCommand implements Command {
 	@Override
 	public void execute() {
 		// TODO Auto-generated method stub
-		garageDoor.up();
+		garageDoor.down();
 	}
 
 	@Override
 	public void undo() {
 		// TODO Auto-generated method stub
-		garageDoor.down();
+		garageDoor.up();
 	}
 
 }
