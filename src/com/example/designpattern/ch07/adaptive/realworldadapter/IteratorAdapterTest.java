@@ -18,12 +18,14 @@ public class IteratorAdapterTest {
 		Enumeration<Integer> e = new IteratorAdapter<Integer>(i);
 		
 		printUsingEnumeration(e);
+		
 	}
 	
 	public static <E> void printUsingEnumeration(Enumeration<E> e) {
 		while(e.hasMoreElements()) {
 			System.out.println(e.nextElement());
 		}
+		
 	}
 
 }
