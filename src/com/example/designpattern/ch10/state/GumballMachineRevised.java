@@ -72,4 +72,12 @@ public class GumballMachineRevised {
 		return count;
 	}
 	
+	public void refill(int noOfBalls) {
+		count = count + noOfBalls;
+		
+		if (count > 0) {
+			state = noQuarterState;
+		}
+	}
+	
 }
