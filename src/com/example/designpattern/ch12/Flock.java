@@ -17,4 +17,18 @@ public class Flock implements Quackable {
 		}
 	}
 
+	@Override
+	public void registerObserver(Observer observer) {
+		// TODO Auto-generated method stub
+		for (Object quacker : quackers) {
+			((Quackable)quacker).registerObserver(observer);
+		}
+	}
+
+	@Override
+	public void notifyObservers() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
